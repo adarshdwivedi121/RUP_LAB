@@ -73,6 +73,7 @@ public class Buyer_Page extends JFrame{
                 this.itemPrice.setText((String) this.itemTable.getValueAt(selectedRow, 3));
 
                 this.itemQuantity.setText((String) itemTable.getValueAt(selectedRow, 2));
+                this.buyQuantity.setModel(new SpinnerNumberModel(0, 0, x, 1));
                 this.buyQuantity.addChangeListener(e1 -> {
                     this.itemQuantity.setText(String.valueOf(x - (int) buyQuantity.getValue()));
                     tableModel.setValueAt(String.valueOf(x - (int) buyQuantity.getValue()), selectedRow, 2);
