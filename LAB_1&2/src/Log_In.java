@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by adarsh on 06/08/2017.
@@ -9,6 +11,8 @@ public class Log_In extends JFrame{
     private JButton logInButton;
     private JPasswordField password;
     private JButton signUp;
+    private JRadioButton userButton;
+    private JRadioButton dealerButton;
     private JLabel message;
 
     public Log_In() {
@@ -20,7 +24,10 @@ public class Log_In extends JFrame{
         logInButton.addActionListener(e -> {
 
             if (Main.checkDetails(username.getText(), String.valueOf(password.getPassword()))){
-                new Buyer_Page(username.getText());
+                if(this.userButton.isSelected())
+                    new Buyer_Page(username.getText());
+                else if(this.dealerButton.isSelected())
+                    new Dealer_Page(this.username.getText());
                 this.dispose();
             }
             else
@@ -33,6 +40,12 @@ public class Log_In extends JFrame{
             }
             else
                 message.setText("User already Exists");
+        });
+        dealerButton.addActionListener(e -> {
+            this.userButton.setSelected(false);
+        });
+        userButton.addActionListener(e -> {
+            this.dealerButton.setSelected(false);
         });
     }
 }
