@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CopyToImageDialog">
+		<item key="CopyToImageDialog.overwriteExisting" value="false"/>
+		<item key="CopyToImageDialog.folder" value="D:\Study Material\Sem 5\RUP_LAB\LAB_5"/>
+		<item key="CopyToImageDialog.imageFormat" value="jpeg"/>
+	</section>
+</section>
