@@ -384,6 +384,22 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MX67E6fzEeem1f9wzV9gfA" points="[0, 0, -124, 135]$[129, -109, 5, 26]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MYEsEKfzEeem1f9wzV9gfA" id="(0.06782455,0.0)"/>
         </edges>
+        <edges xmi:id="_rXK6Iaf2Eeem1f9wzV9gfA" element="_rXK6IKf2Eeem1f9wzV9gfA" source="_rV0okafxEeem1f9wzV9gfA" target="_rV0okafxEeem1f9wzV9gfA">
+          <children xmi:id="_rXK6JKf2Eeem1f9wzV9gfA" type="TransitionLabelCompartment">
+            <children xmi:id="_rXK6Jqf2Eeem1f9wzV9gfA" type="Stereotype"/>
+            <children xmi:id="_rXK6J6f2Eeem1f9wzV9gfA" type="TransitionLabel"/>
+            <children xmi:id="_rXK6KKf2Eeem1f9wzV9gfA" type="TriggersLabel">
+              <children xmi:id="_rXK6Kqf2Eeem1f9wzV9gfA" type="Triggers">
+                <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_rXK6K6f2Eeem1f9wzV9gfA"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXK6Kaf2Eeem1f9wzV9gfA" y="529"/>
+            </children>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rXK6Jaf2Eeem1f9wzV9gfA" y="-186"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_rXK6Iqf2Eeem1f9wzV9gfA" fontName="Segoe UI" routing="Rectilinear" showStereotype="Text"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rXK6I6f2Eeem1f9wzV9gfA" points="[-1852, 0, -1323, 688]$[-1852, 609, -1323, 1297]$[79, 609, 608, 1297]$[79, 0, 608, 688]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rXK6LKf2Eeem1f9wzV9gfA" id="(0.67971885,1.0)"/>
+        </edges>
       </contents>
     </eAnnotations>
     <region xmi:id="_5X_0wafvEeem1f9wzV9gfA" name="Region1">
@@ -401,7 +417,7 @@
           <transition xmi:id="_pvHUAKfyEeem1f9wzV9gfA" kind="local" target="_n6cG4qfxEeem1f9wzV9gfA" source="_o4pmEKfyEeem1f9wzV9gfA"/>
         </region>
         <region xmi:id="_hrIE4qfxEeem1f9wzV9gfA" name="Region2">
-          <subvertex xmi:type="uml:State" xmi:id="_rV0okKfxEeem1f9wzV9gfA" name="Timer Started" outgoing="_2Qke4KfxEeem1f9wzV9gfA" incoming="_u1kQcKfyEeem1f9wzV9gfA"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rV0okKfxEeem1f9wzV9gfA" name="Timer Started" outgoing="_2Qke4KfxEeem1f9wzV9gfA _rXK6IKf2Eeem1f9wzV9gfA" incoming="_u1kQcKfyEeem1f9wzV9gfA _rXK6IKf2Eeem1f9wzV9gfA"/>
           <subvertex xmi:type="uml:State" xmi:id="_wLD5MKfxEeem1f9wzV9gfA" name="Sound Buzzer" incoming="_2Qke4KfxEeem1f9wzV9gfA"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_thVocKfyEeem1f9wzV9gfA" outgoing="_u1kQcKfyEeem1f9wzV9gfA"/>
           <transition xmi:id="_2Qke4KfxEeem1f9wzV9gfA" name="timerEndReached " kind="local" target="_wLD5MKfxEeem1f9wzV9gfA" guard="_MBQkAKfyEeem1f9wzV9gfA" source="_rV0okKfxEeem1f9wzV9gfA">
@@ -412,6 +428,13 @@
             </ownedRule>
           </transition>
           <transition xmi:id="_u1kQcKfyEeem1f9wzV9gfA" kind="local" target="_rV0okKfxEeem1f9wzV9gfA" source="_thVocKfyEeem1f9wzV9gfA"/>
+          <transition xmi:id="_rXK6IKf2Eeem1f9wzV9gfA" name="" target="_rV0okKfxEeem1f9wzV9gfA" guard="_u9YL0Kf2Eeem1f9wzV9gfA" source="_rV0okKfxEeem1f9wzV9gfA">
+            <ownedRule xmi:id="_u9YL0Kf2Eeem1f9wzV9gfA" constrainedElement="_rXK6IKf2Eeem1f9wzV9gfA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_u9YL0af2Eeem1f9wzV9gfA">
+                <body>timer not 0</body>
+              </specification>
+            </ownedRule>
+          </transition>
         </region>
       </subvertex>
       <subvertex xmi:type="uml:State" xmi:id="_6qIDoKfyEeem1f9wzV9gfA" name="Off" outgoing="_-w_LUKfyEeem1f9wzV9gfA" incoming="_8s1iQKfyEeem1f9wzV9gfA _AXTB0KfzEeem1f9wzV9gfA _MX67EKfzEeem1f9wzV9gfA"/>
